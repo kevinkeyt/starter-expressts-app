@@ -1,12 +1,15 @@
 import * as express from 'express';
 import * as dotenv from 'dotenv';
 import * as cookieParser from 'cookie-parser';
+import * as bodyParser from 'body-parser';
 
 import { Request, Response } from 'express';
 const app = express();
 dotenv.config();
 
 app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true}));
 
 const {
   PORT = 3000,
