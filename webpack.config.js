@@ -6,7 +6,7 @@ const { NODE_ENV = 'production'} = process.env;
 
 module.exports = {
     watch: NODE_ENV === 'development',
-    entry: './src/index.ts',
+    entry: './src/server/index.ts',
     mode: NODE_ENV,
     target: 'node',
     plugins: [
