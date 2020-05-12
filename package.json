@@ -6,8 +6,9 @@
   "scripts": {
     "build": "webpack",
     "start": "set NODE_ENV=development&&npm run build",
-    "run:dev": "nodemon build/index.js",
-    "clean": "rimraf \"node_modules/!(rimraf|.bin)\"",
+    "run:dev": "nodemon dist/index.js",
+    "clean": "rimraf \"node_modules/!(rimraf|.bin)\" && npm run clean:dist",
+    "clean:dist": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
